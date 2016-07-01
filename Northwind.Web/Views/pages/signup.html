@@ -1,0 +1,47 @@
+﻿<div class="container" ng-controller="signupController">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Signup</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" name="signupForm" novalidate>
+                        <fieldset>
+                            <div class="form-group" ng-class="{ 'has-error' : (signupForm.email.$invalid && !signupForm.email.$pristine) }">
+                                <input class="form-control" placeholder="E-mail" name="email" type="email" data-ng-model="signupData.Email"
+                                       popover="{{(signupForm.email.$invalid && !signupForm.email.$pristine) ? 'Please enter valid email id' : ''}}"
+                                       popover-trigger="mouseenter" ng-required="true" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="First Name" name="firstName" type="text" data-ng-model="signupData.UserProfileInfo.FirstName" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Last Name" name="lastName" type="text" data-ng-model="signupData.UserProfileInfo.LastName" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Company" name="companyName" type="text" data-ng-model="signupData.UserProfileInfo.Company" autofocus>
+                            </div>
+                            <div class="form-group" ng-class="{ 'has-error' : (signupForm.password.$invalid && !signupForm.password.$pristine) }">
+                                <input class="form-control" placeholder="Password" name="password" type="password" value="" data-ng-model="signupData.Password"
+                                       pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"
+                                       popover="{{(signupForm.password.$invalid && !signupForm.password.$pristine) ? 'Please enter valid password' : 'Password must be at least 6 characters, one number, one special character, one upper carse, one lower case'}}"
+                                       popover-trigger="mouseenter" ng-required="true">
+                            </div>
+                            <div class="form-group" ng-class="{ 'has-error' : (signupForm.confirmPassword.$invalid && !signupForm.confirmPassword.$pristine) }">
+                                <input class="form-control" placeholder="Confirm Password" name="confirmPassword" type="password" value="" data-ng-model="signupData.confirmPassword"
+                                       ng-match="signupData.Password"
+                                       popover="{{(signupForm.confirmPassword.$invalid && !signupForm.confirmPassword.$pristine) ? 'password & confirm password should match' : ''}}"
+                                       popover-trigger="mouseenter"
+                                       ng-required="!signupForm.confirmPassword.$error.match">
+                            </div>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <a ng-click="signUp()" class="btn btn-lg btn-success btn-block">Signup</a>
+                            <a class="btn btn-link pull-right" ng-click="login()">Login</a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
