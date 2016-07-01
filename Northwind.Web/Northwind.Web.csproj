@@ -25,6 +25,7 @@
     <RestorePackages>true</RestorePackages>
     <TargetFrameworkProfile />
     <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -820,18 +821,6 @@
     <Content Include="Script\Vendor\oclazyload\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Source\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj">
-      <Project>{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}</Project>
-      <Name>Repository.Pattern.Ef6</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\Repository.Pattern\Repository.Pattern.csproj">
-      <Project>{6E682A14-C872-4813-B620-76E108DEA683}</Project>
-      <Name>Repository.Pattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Source\Service.Pattern\Service.Pattern.csproj">
-      <Project>{86F86650-EE3C-4372-8FEC-40C2FE015022}</Project>
-      <Name>Service.Pattern</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Northwind.Entities\Northwind.Entities.csproj">
       <Project>{94e81d48-74b2-42eb-b389-f25c8c23f9c4}</Project>
       <Name>Northwind.Entities</Name>
