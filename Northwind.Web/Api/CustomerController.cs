@@ -1,4 +1,5 @@
-﻿using System.Data.Entity.Infrastructure;
+
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace Northwind.Web.Api
 {
     public class CustomerController : ODataController
     {
+        //Added Comment
         private readonly ICustomerService _customerService;
         private readonly IUnitOfWorkAsync _unitOfWorkAsync;
 
